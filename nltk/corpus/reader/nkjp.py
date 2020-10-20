@@ -268,7 +268,7 @@ class XML_Tool:
                 ret = " ".join(x)
                 x = re.split("</choice>", ret)  # in ann_segmentation.xml
                 ret = " ".join(x)
-                fw.write(ret)
+                fw.write(bytes(ret, encoding='utf-8'))
             fr.close()
             fw.close()
             return self.write_file.name
